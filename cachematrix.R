@@ -4,6 +4,7 @@
 ## its inverse as well. Therefore, when the inverse function is called, the inverse 
 ## is only computed if it has not been computed before
 
+
 ## makeCacheMatrix is a function which receives a matrix(x) and returns a list with 
 ## several functions that can operate over the matrix parameter.
 ## Four operators/functions are supported over the matrix:
@@ -28,7 +29,8 @@ makeCacheMatrix <- function(x = matrix()) {
 
 ## cacheSolve is a function which receives a matrix(x) and the additional parameters of the base function "solve"
 ## and returns the respective inverse. If the inverse has been computed before, it avoids from computing it again. 
-cacheSolve <- function(x, ...) 
+cacheSolve <- function(x, ...)
+{
         ## Return a matrix that is the inverse of 'x'
         inv <- x$getinv()
         if(is.null(inv))
